@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <style>
+        * {
+            font-family: 'Old Standard TT', serif;
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: lightblue">
+    <div class="container">
+        <h1 class="text-center my-4"> <i class="fas fa-users fa-md"></i>
+         Registration <span class="d-none d-sm-inline"> Panel </span>
+        </h1>
+        <form>
+            <div class="row">
+                    <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                        <label for="first_name" class="float-md-right d-none d-sm-inline">
+                        <span class="d-sm-none d-md-inline">
+                            First </span> Name :
+                        </label>
+                    </div>
+                    <div class="col-sm-8 col-lg-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter First Name" >
+                        </div>
+                    </div>
 
+                    <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                        <label for="Last_name" class="float-md-right d-none d-sm-inline">
+                        <span class="d-sm-none d-md-inline">
+                            Last </span> Name :
+                        </label>
+                    </div>
+                    <div class="col-sm-8 col-lg-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="Last_name" name="Last_name" placeholder="Enter Last Name" >
+                        </div>
+            </div>
+            </div>
+            <div class="row my-3">
+                <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                    <label for="gender" class="float-md-right d-none d-sm-inline"> <span class="d-sm-none d-md-inline"> Gender </span> Type :</label>
+                </div>
+                <div class="col-sm-8 col-lg-4">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-male"></i></div>
+                        </div>
+                        <select class="form-control" id="gender" name="gender">
+                            <option>Select Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                    <label for="dateofbirth" class="float-md-right d-none d-sm-inline">
+                        <span class="d-sm-none d-md-inline">
+                            Date Of </span> Birth :
+                    </label>
+                </div>
+                <div class="col-sm-8 col-lg-4">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                        <input type="date" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="Enter Date Of Birth" >
+                    </div>
+                </div>
+            </div>
+                <div class="row my-3">
+                    <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                        <label for="email" class="float-md-right d-none d-sm-inline"> <span class="d-sm-none d-md-inline"> Email </span> Address :</label>
+                    </div>
+                    <div class="col-sm-8 col-lg-10">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="far fa-envelope"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" >
+                        </div>
+                    </div>
+                </div>
+            <div class="row my-3">
+                <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                    <label for="password" class="float-md-right d-none d-sm-inline"> <span class="d-sm-none d-md-inline"> </span> Password :</label>
+                </div>
+                <div class="col-sm-8 col-lg-10">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-key"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Your Password" >
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                    <label for="confirmpassword" class="float-md-right d-none d-sm-inline"> <span class="d-sm-none d-md-inline">Confirm </span> Password :</label>
+                </div>
+                <div class="col-sm-8 col-lg-10">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-key"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Enter Confirm Password" >
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-sm-4 col-lg-2"></div>
+                <div class="col-sm-8 col-lg-4">
+                    <button type="submit" class="btn btn-primary btn-block"><i class="far fa-thumbs-up"></i> Submit </button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
