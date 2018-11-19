@@ -1,0 +1,120 @@
+@media (max-width: 991px) {
+    .ct-pageHeader.ct-pageHeader--hasDescription .row {
+        display: block;
+        width: auto;
+    }
+    .ct-pageHeader.ct-pageHeader--hasDescription .row div[class^="col-"] {
+        display: block;
+    }
+    .ct-pageHeader.ct-pageHeader--hasDescription .row div[class^="col-"]:last-child {
+        padding-left: 15px;
+    }
+    .ct-pageHeader.ct-pageHeader--hasDescription .row div[class^="col-"]:last-child span {
+        border-left: none !important;
+        padding: 0 !important;
+    }
+}
+.ct-fw-600{
+    font-weight: 600;
+}
+.text-lowercase{
+    text-transform: lowercase;
+}
+
+h1{
+    line-height: 1.1;
+}
+
+body{
+    font-size:15px;
+    font-weight: bold;
+    line-height: 2em;
+    color: #ffffff;
+}
+
+.row{
+    margin-left:-12.5px;
+    margin-right: -12.5px;
+}
+
+.ct-pageHeader.ct-pageHeader--motive {
+    background-color: #fc4349;
+    text-align: match-parent;
+
+}
+.ct-u-colorWhite{
+    color: #ffffff;
+
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+}
+
+.ct-u-size20{
+    font-size: 20px;
+}
+
+.ct-u-triangleBottomLeft, .ct-u-triangleBottomRight {
+    border-style: solid;
+}
+.ct-u-padding10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+footer.ct-u-backgroundDarkGray {
+    color: #999999;
+    background-color: #222222;
+    padding: 15px;
+    line-height: 50px;
+
+}
+
+#Allign-the-elements> li {
+    float: left;
+
+}
+
+#Allign-the-elements{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#Allign-the-elements > li a{
+
+    text-align: justify;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+#Allign-the-elements > li a:hover{
+
+    background-color: White;
+}
+
+h2, .h2 {
+         font-size: 60px;
+        text-align: center;
+    padding: 20px 20px;
+
+}
+
+h2, .span{
+    color: #222222;
+}
+
+h2> .ct-fw-300{
+    color:  #fc4349;
+}
