@@ -1,5 +1,252 @@
+body{
+    font-size:15px;
+    font-weight: bold;
+    line-height: 2em;
+    color: black;
+}
+
+.row{
+    margin-left:-12.5px;
+    margin-right: -12.5px;
+}
+
+.ct-pageHeader.ct-pageHeader--motive {
+    background-color: #fc4349;
+    text-align: match-parent;
+
+}
+
+.ct-u-colorWhite{
+    color: #ffffff;
+
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+}
+
+.ct-u-size20{
+    font-size: 20px;
+}
+
+
+.ct-u-padding10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ct-u-backgroundDarkGray {
+    color: #999999;
+    background-color: #222222;
+    padding: 50px;
+    line-height: 50px;
+
+}
+
+.Allign-the-elements > li {
+    float: left;
+
+}
+
+.Allign-the-elements{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.Allign-the-elements > li a{
+
+    text-align: justify;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.Allign-the-elements > li a:hover{
+
+    background-color: lightblue;
+}
+
+h2, .h2 {
+    font-size: 60px;
+    text-align: center;
+    padding: 20px 20px;
+
+}
+
+h2, .span{
+    color: #222222;
+}
+
+h2> .ct-fw-300{
+    color:  #fc4349;
+}
+
+
+.img1 {
+
+    border-radius: 50%;
+
+}
+
+
+.Link
+{
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: darkred;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+/* visited link */
+
+
+/* mouse over link */
+a:hover {
+    color: darkgray;
+}
+
+/* selected link */
+a:active {
+    color: lightblue;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+#about-intro
+{
+    background: floralwhite;
+
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+.About
+{
+    background-color: floralwhite;
+    color: black;
+    mix-blend-mode: difference;
+    margin: 20px;
+    text-align: justify;
+}
+
+
+.mb-wrap {
+    margin : 20px auto;
+    padding : 20px;
+    position : relative;
+    width : 600px;
+    text-align: justify;
+}
+
+.mb-wrap p {
+    margin : 0;
+    padding : 0;
+}
+
+.mb-wrap blockquote {
+    margin : 0;
+    padding : 0;
+    position : relative;
+}
+
+.mb-wrap cite {
+    font-style : normal;
+}
+
+.mb-style-2 blockquote {
+    padding-top : 150px;
+}
+
+.mb-style-2 blockquote:after {
+    background: none repeat scroll 0 0 rgba(235, 150, 108, 0.8);
+    border-radius: 50% 50% 50% 50%;
+    color: rgba(255, 255, 255, 0.5);
+    content: "❞";
+    font-family: 'icons';
+    font-size: 70px;
+    height: 130px;
+    left: 50%;
+    line-height: 130px;
+    margin-left: -65px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+    top: 0;
+    width: 130px;
+}
+.mb-style-2 blockquote:before {
+    border-left: 5px solid rgba(235, 150, 108, 0.1);
+    border-radius: 50% 50% 50% 50%;
+    content: "";
+    height: 500px;
+    left: -50px;
+    position: absolute;
+    top: 0;
+    width: 500px;
+    z-index: -1;
+}
+
+.mb-style-2 blockquote p {
+    background : none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow : 0 -6px 0 rgba(235, 150, 108, 0.2);
+    color : rgba(235, 150, 108, 0.8);
+    display : inline;
+    font-family : Baskerville, Georgia, serif;
+    font-style : italic;
+    font-size : 28px;
+    line-height : 46px;
+    text-shadow : 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.mb-attribution {
+    text-align : right;
+}
+
+.mb-author {
+    color : #D49158;
+    font-size : 18px;
+    font-weight : bold;
+    padding-top : 10px;
+    text-shadow : 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-transform : uppercase;
+    margin-right: 30px;
+}
+
+cite a {
+    color : #D7AA94;
+    font-style : italic;
+}
+
+cite a:hover {
+    color : #D48158;
+}
+
+#team > .clear {
+    text-align: center;
+    background-color: floralwhite;
+}
+
 .jumbotron {
-    background: lightblue;
+    background: lightgray;
     border-radius: 10px;
 }
 .jumbotron-sm { padding-top: 20px;
