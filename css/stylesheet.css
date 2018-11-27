@@ -16,6 +16,9 @@ body{
 
 }
 
+a.nav-link{
+    color: red;
+}
 .ct-u-colorWhite{
     color: #ffffff;
 
@@ -126,9 +129,6 @@ a:active {
     color: lightblue;
 }
 
-a:visited {
-    color: lightgray;
-}
 
 #about-intro
 {
