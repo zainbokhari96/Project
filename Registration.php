@@ -1,3 +1,27 @@
+<?php
+
+require_once "server/db_connection.php";
+
+if(isset($_POST['insert_registration'])){
+    $fname = $_POST['first_name'];
+    $lname =$_POST['Last_name'];
+    $gen =$_POST['gender'];
+    $user_dob = $_POST['dateofbirth'];
+    $mail = $_POST['email'];
+    $pass =$_POST['password'];
+    $con_pass = $_POST['confirmpassword'];
+
+    $q = "insert into registration (first_name,last_name,gender,dob,email,password,confrim_password)
+    values ('$fname','$lname','$gen','$user_dob','$mail','$pass','$con_pass')";
+    $r = mysqli_query($con,$q);
+    if(!$r){
+        echo "NOT EXECUTE";
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +46,7 @@
             <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Registration.html">Registration</a>
+            <a class="nav-link" href="Registration.php">Registration</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="Login.html">Login</a>
@@ -34,7 +58,7 @@
             <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Contact%20Us.html">Contact</a>
+            <a class="nav-link" href="Contact_Us.php">Contact</a>
         </li>
     </ul>
 
@@ -45,7 +69,7 @@
         <h1 class="text-center my-4"> <i class="fas fa-users fa-md"></i>
          Registration <span class="d-none d-sm-inline"> Panel </span>
         </h1>
-        <form>
+        <form action="Registration.php" method="post">
             <div class="row">
                     <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
                         <label for="first_name" class="float-md-right d-none d-sm-inline">
@@ -130,7 +154,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-key"></i></div>
                         </div>
-                        <input type="text" class="form-control" id="password" name="password" placeholder="Enter Your Password" >
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" >
                     </div>
                 </div>
             </div>
@@ -143,14 +167,14 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-key"></i></div>
                         </div>
-                        <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Enter Confirm Password" >
+                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Enter Confirm Password" >
                     </div>
                 </div>
             </div>
             <div class="row my-3">
                 <div class="col-sm-4 col-lg-2"></div>
                 <div class="col-sm-8 col-lg-4">
-                    <button type="submit" class="btn btn-primary btn-block"><i class="far fa-thumbs-up"></i> Submit </button>
+                    <button type="submit" name="insert_registration" style="background-color: darkred" class="btn btn-primary btn-block"><i class="far fa-thumbs-up"></i> Submit </button>
                 </div>
             </div>
         </form>

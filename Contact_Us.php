@@ -1,3 +1,25 @@
+<?php
+
+require_once "server/db_connection.php";
+
+if(isset($_POST['insert_contact_us'])){
+    $name = $_POST['name'];
+    $mail = $_POST['email'];
+    $phone =$_POST['phone'];
+    $sub = $_POST['subject'];
+    $msg= $_POST['message'];
+
+    $q = "insert into contact_us (con_name,con_email,con_phone,con_subject,con_messege)
+    values ('$name','$mail','$phone','$sub','$msg')";
+    $r = mysqli_query($con,$q);
+    if(!$r){
+        echo "NOT EXECUTE";
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -22,7 +44,7 @@
             <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Registration.html">Registration</a>
+            <a class="nav-link" href="Registration.php">Registration</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="Login.html">Login</a>
@@ -34,7 +56,7 @@
             <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Contact%20Us.html">Contact</a>
+            <a class="nav-link" href="Contact_Us.php">Contact</a>
         </li>
     </ul>
 
@@ -59,21 +81,21 @@
         <div class="row">
             <div class="col-md-8">
             <div class="top top-sm">
-                <form>
+                <form action="Contact_Us.php" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <i class="fas fa-file-signature"></i>
-                                <input type="text" class="form-control" id="name" placeholder="Enter Name" />
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" />
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <i class="far fa-envelope"></i><input type="text" class="form-control" id="email" placeholder="Enter Email">
+                                <i class="far fa-envelope"></i><input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <i class="fas fa-phone-square"></i><input type="text" class="form-control" id="phone" placeholder="Enter Phone Number :">
+                                <i class="fas fa-phone-square"></i><input type="text" name="phone" class="form-control" id="phone" placeholder="Enter Phone Number :">
                             </div>
                             <div class="form-group">
                                 <label for="subject">
@@ -93,7 +115,7 @@
                                           placeholder="Message"></textarea>
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary pull-right" >Submit</button>
+                                <button type="submit" name="insert_contact_us" class="btn btn-primary pull-right" >Submit</button>
                         </div>
                         </div>
                     </div>
