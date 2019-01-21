@@ -1,156 +1,69 @@
-<?php 
-include('server/server.php');
-/*
-    session_start();
-    //connect to the database
-    $con = mysqli_connect('localhost','root','','steam');
-
-    if (isset($_POST['done'])) 
-    {
-        $username = $_POST['mail'];
-        $password = $_POST['password'];
-        echo "$username";
-        echo "$password";
-
-        $username = stripslashes($username);
-        $password = stripslashes($password);
-        
-        if (empty($username)) 
-        {
-            echo "Username is required";
-        }
-        if (empty($password))
-        {
-            echo "Password is required";
-        }
-
-       
-            $query = "SELECT * FROM `registration` WHERE email='$username' AND password='$password'";
-            $results = mysqli_query($con,$query);
-            $count = mysqli_num_rows($results);
-           
-            if ($count == 1) 
-            {
-              $_SESSION['username']=$username;
-              $_SESSION['success'] = "You are now logged in";
-               header("location: index.html");
-            }
-            else 
-            {
-               echo "Wrong Email or Password combination";
-            }
-        //header("location: Login.php");
-    }*/
-  
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login </title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->  
-  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="css/bootstraplogin.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->  
-  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->  
-  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="css/util.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
-
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+    rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
 </head>
 <body>
-<form method="post">
-  <?php include('errors.php')?>
-  <div class="limiter">
-    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-      <div class="wrap-login100">
-        <form class="login100-form validate-form">
-          <span class="login100-form-logo">
-            <i class="zmdi zmdi-landscape"></i>
-          </span>
 
-          <span class="login100-form-title p-b-34 p-t-27">
-            Log in
-          </span>
+<?php include_once ("includes/nav.php"); ?>
 
-          <div class="wrap-input100 validate-input">
-            <input class="input100" type="text" name="mail" placeholder="Email">
-            <span class="focus-input100" data-placeholder="&#xf207;"></span>
-          </div>
+<div class="container">
+    <h1 class="text-center my-4"> <i class="fas fa-users fa-md"></i>
+        <span class="d-none d-sm-inline"> Customer </span> Login
+    </h1>
+    <form>
+        <div class="row my-3">
+            <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                <label for="email" class="float-md-right d-none d-sm-inline"> <span class="d-sm-none d-md-inline"> Email </span> Address :</label>
+            </div>
+            <div class="col-sm-8 col-lg-10">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="far fa-envelope"></i></div>
+                    </div>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" required pattern="[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}" >
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="m-md-auto m-sm-auto col-sm-4 col-lg-2">
+                <label for="password" class="float-md-right d-none d-sm-inline"> <span class="d-sm-none d-md-inline"> </span> Password :</label>
+            </div>
+            <div class="col-sm-8 col-lg-10">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-key"></i></div>
+                    </div>
+                    <input type="text" class="form-control" id="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-lg-2"></div>
+        <div class="row my-3">
+            <div class="col-sm-8  col-lg-4">
+                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-unlock-alt"></i> Login </button>
+            </div>
+            <div class="col-sm-8 col-lg-4">
+                <button type="button" class="btn btn-primary btn-block"><i class="fas fa-lock"></i> Forget Password </button>
+            </div>
+        </div>
+    </form>
+</div>
 
-          <div class="wrap-input100 validate-input">
-            <input class="input100" type="password" name="password" placeholder="Password">
-            <span class="focus-input100" data-placeholder="&#xf191;"></span>
-          </div>
 
-          <div class="contact100-form-checkbox">
-            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-            <label class="label-checkbox100" for="ckb1">
-              Remember me
-            </label>
-          </div>
-
-          <div class="container-login100-form-btn">
-            <button type="submit" class="login100-form-btn" name="done" value="login">
-              Login
-            </button>
-          </div>
+<?php   include_once("includes/footer.php");  ?>
 
 
-          <div class="text-center p-t-90">
-            <a class="txt1" href="registration.html">
-              Sign up!
-            </a>
-            <br>
-            <a class="txt1" href="#">
-              Forgot Password?
-            </a>
-            <br>
-            
-            <a class="txt1" href="index.html">
-              Go back!
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</form> 
-
-  <div id="dropDownSelect1"></div>
-  
-<!--===============================================================================================-->
-  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-  <script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-  <script src="vendor/bootstrap/js/popper.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-  <script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-  <script src="vendor/daterangepicker/moment.min.js"></script>
-  <script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-  <script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-  <script src="js/main.js"></script>
 
 </body>
 </html>

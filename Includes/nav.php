@@ -3,22 +3,22 @@
     <!-- Links -->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Registration.html">Registration</a>
+            <a class="nav-link" href="Registration.php">Registration</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Login.html">Login</a>
+            <a class="nav-link" href="Login.php">Login</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Forget%20Password.html">Forget Password</a>
+            <a class="nav-link" href="Forget%20Passwordphp">Forget Password</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.php">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Contact%20Us.html">Contact</a>
+            <a class="nav-link" href="Contact_Us.php">Contact</a>
         </li>
     </ul>
 

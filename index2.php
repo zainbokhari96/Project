@@ -41,7 +41,7 @@
   </div>
 
   <div class="topnav" id="myTopnav" style = "z-index:999;">
-    <a href="index.html" >Home</a>
+    <a href="index.php" >Home</a>
     <a href="About.html">About</a>
     <a href="Contact Us.html">Contact</a>
     <a href="#">Terms</a>

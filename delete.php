@@ -106,7 +106,7 @@ if($c == '6'){
         Profile <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#"><i class = "fa fa-suitcase" ></i> Edit Profile</a></li>
-          <li><a href="Forget Password.html"><i class = "fa fa-key" ></i> Change Password</a></li>
+          <li><a href="Forget Password.php"><i class = "fa fa-key" ></i> Change Password</a></li>
           <li><a href="#"><i class = "fa fa-sign-in" ></i>  Logout</a></li>
         </ul>
       </li>
