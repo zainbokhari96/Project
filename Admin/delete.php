@@ -4,8 +4,6 @@ $c = 0;
 
 if(isset($_POST['done'])){
 
-  $qty = $_POST['Account_Quantity'];
-  $price = $_POST['A_price'];
   $rank =  $_POST['Account_rank'];
 
  if(isset($_POST['category'])){
@@ -14,41 +12,42 @@ if(isset($_POST['done'])){
 }
 
 if($c == '1'){
-      $q = "INSERT INTO `dota2` (`rank`,`Quantity`,`Price`) VALUES ('$rank','$qty','$price')";
+
+      $q = "DELETE FROM `dota2` WHERE `dota2`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 }
 if($c == '2'){
-      $q = "INSERT INTO `csgo`(`rank`,`quantity`, `price`) VALUES ('$rank','$qty','$price')";
+      $q = "DELETE FROM `csgo` WHERE `csgo`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 }  
 
 if($c == '3'){
-      $q = "INSERT INTO `fifa`(`rank`,`quantity`, `price`) VALUES ('$rank','$qty','$price')";
+      $q = "DELETE FROM `fifa` WHERE `fifa`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
 
 if($c == '4'){
-      $q = "INSERT INTO `pubg`(`rank`,`quantity`, `price`) VALUES ('$rank','$qty','$price')";
+      $q = "DELETE FROM `pubg` WHERE `pubg`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
 
 if($c == '5'){
-      $q = "INSERT INTO `r6`(`rank`,`quantity`, `price`) VALUES ('$rank','$qty','$price')";
+      $q = "DELETE FROM `r6` WHERE `r6`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
 
 if($c == '6'){
-      $q = "INSERT INTO `bf5`(`rank`,`quantity`, `price`) VALUES ('$rank','$qty','$price')";
+      $q = "DELETE FROM `bf5` WHERE `bf5`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
-  header("location: add.php");
+  header("location: delete.php");
 }
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Add Account</title>
+  <title>Delete Account</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -56,10 +55,10 @@ if($c == '6'){
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link  rel="stylesheet" type="text/css" href="css/style1.css">
-  <link  rel="stylesheet" type="text/css" href="css/style2.css">
+  <link  rel="stylesheet" type="text/css" href="../css/style1.css">
+  <link  rel="stylesheet" type="text/css" href="../css/style2.css">
 
-  <link  rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link  rel="stylesheet" type="text/css" href="../bootstrap.css">
 
  <style>
         .success {
@@ -82,7 +81,7 @@ if($c == '6'){
    <div class="container-fluid" style="background-color: #222222" >
         <div class="row" style="background-color: #222222">
                 <h1 class="text-primary" style="font-size: 50px">
-                   <i class="fa fa-cubes"></i><strong>Add Account</strong>
+                   <i class="fa fa-cubes"></i><strong>Delete Account</strong>
                 </h1>
             
   <nav class="navbar navbar-inverse" style = "z-index: 1000 !important">
@@ -93,11 +92,12 @@ if($c == '6'){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="admin.php"><i class = "fa fa-dashboard"></i> DashBoard</a>
+      <a class="navbar-brand" href="#"><i class = "fa fa-dashboard"></i> DashBoard</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li ><a href="delete.php"> <i class = "fa fa-trash"></i> Delete Account</a></li>
+       
         <li><a href="add.php"> <i class = "fa fa-plus"></i> Add Account</a></li>
         <li><a href="#"> <i class = "fa fa-usd"></i> Payments</a></li>
       </ul>
@@ -106,7 +106,7 @@ if($c == '6'){
         Profile <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#"><i class = "fa fa-suitcase" ></i> Edit Profile</a></li>
-          <li><a href="#"><i class = "fa fa-key" ></i> Change Password</a></li>
+          <li><a href="../Forget%20Password.php"><i class = "fa fa-key" ></i> Change Password</a></li>
           <li><a href="#"><i class = "fa fa-sign-in" ></i>  Logout</a></li>
         </ul>
       </li>
@@ -127,7 +127,7 @@ if($c == '6'){
 <div class = "jumbotron">
 <table id="acc">
   <tr>
-    <th >Add Vendor</th>
+    <th >Delete Vendor</th>
     
     
   </tr>
@@ -153,15 +153,7 @@ if($c == '6'){
     <td><input required  min="0" minlength="1" maxlength="15" class="form-control"  name=Account_rank type="text" placeholder="Enter account Title/Rank" id="Account_rank" onblur="AccountName()"></td>
     <td width="364"><div id="ar" style="color:#FF0000 "></div>
   </tr>
-  <tr>
-    <td><input required  min="0" minlength="1" maxlength="15" class="form-control"   name=Account_Quantity type="numeric" placeholder="Enter Account Quantity" id="Account_Quantity" onblur="AccountQty()"></td>
-    <td width="364"><div id="aq" style="color:#FF0000 "></div>
-  </tr>
-  <tr>
-    <td><input required  min="0" minlength="1" maxlength="15" class="form-control"   name=A_price type="numeric" placeholder="Enter Account Price" id="A_price" onblur="AccountPrice()"></td>
-    <td width="364"><div id="ap" style="color:#FF0000 "></div>
-  </tr>
-
+  
   
  
  
