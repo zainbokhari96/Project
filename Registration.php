@@ -141,7 +141,7 @@ if(isset($_POST['insert_registration'])){
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="far fa-envelope"></i></div>
                             </div>
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" >
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" required pattern="[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}">
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,8 @@ if(isset($_POST['insert_registration'])){
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-key"></i></div>
                         </div>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" >
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" required>
+
                     </div>
                 </div>
             </div>
@@ -167,7 +168,7 @@ if(isset($_POST['insert_registration'])){
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-key"></i></div>
                         </div>
-                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Enter Confirm Password" >
+                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Enter Confirm Password" required>
                     </div>
                 </div>
             </div>

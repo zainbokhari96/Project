@@ -91,11 +91,11 @@ if(isset($_POST['insert_contact_us'])){
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <i class="far fa-envelope"></i><input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+                                <i class="far fa-envelope"></i><input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" required pattern="[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <i class="fas fa-phone-square"></i><input type="text" name="phone" class="form-control" id="phone" placeholder="Enter Phone Number :">
+                                <i class="fas fa-phone-square"></i><input type="text" name="phone" class="form-control" id="phone" placeholder="Enter Phone Number :" required pattern="(03\d\d[-]?\s?\d{7})|(\+92[-]?\s?3\d\d[-]?\d{7})|(0092[-]?\s?3\d\d[-]?\s?\d{7})">
                             </div>
                             <div class="form-group">
                                 <label for="subject">
