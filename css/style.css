@@ -3,6 +3,7 @@
   overflow: hidden;
   background-color: #333;
   size: 40px;
+  
 }
 .topnav > a:visited {
     color: #f2f2f2;
@@ -48,6 +49,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+
 }
 
 .sticky + .content {

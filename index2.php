@@ -1,3 +1,7 @@
+<?php 
+  include('server/server.php'); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
@@ -16,13 +20,32 @@
    
 
 <body>
+
+  <div>
+    <?php if(isset($_SESSION['success'])): ?>
+      <div>
+        <h3>
+          <?php 
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+          ?>
+        </h3>
+      </div>
+    <?php endif ?>
+
+    <?php if (isset($_SESSION["mail"])) :?>
+      <p>Welcome <strong><?php echo $_SESSION['mail']; ?></strong></p>
+      <p><a href="index2.php? logout='1'" style="color: black">Logout</a></p>
+
+    <?php endif ?>
+  </div>
+
   <div class="topnav" id="myTopnav" style = "z-index:999;">
     <a href="index.html" >Home</a>
     <a href="About.html">About</a>
-    <a href="Registration.html">Registration</a>
     <a href="Contact Us.html">Contact</a>
     <a href="#">Terms</a>
-    <a href="login.php">Login</a>
+    <a href="checkout.php">Checkout</a>
     <a href="#" class="icon" onclick="myFunction1()">
       <i class="fa fa-bars"></i>
     </a>
@@ -51,8 +74,8 @@
 </div>
 
 <h2 class="ct-fw-600 class=col-xl-12">
-    <span class="text-lowercase">login to buy!</span><br>
-    <small class="ct-u-colorMotive ct-fw-300">Make your gaming experiance worthwhile.</small>
+    <span class="text-lowercase">That's the spirit!</span><br>
+    <small class="ct-u-colorMotive ct-fw-300"> Now you can buy the acccounts below</small>
 </h2>
 
 
@@ -91,19 +114,23 @@
     <div class = "row" style="margin-top: 40px">
         <div class = "col-md-4">
           <p style = "margin-left: 75px"> Counter-Strike Global Offensive </p>
-          <img class="img-responsive" src = "images/csgo.jpg" >
-          <p > Price: $5.0 </p>
-
+          <img class="img-responsive" src = "images/csgo.jpg">
+             <div><br></div>
+          <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding:5px" >buy now for $5.0</button></a>
+          
         </div>
            <div class = "col-md-4">
              <p style = "margin-left: 75px"> Dota 2 (Rank Locked)</p>
              <img  class="img-responsive" src = "images/Dota_2.jpg" >
-             <p > Price:4.20$ </p>
+             <div><br></div>
+              <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding: 5px" >buy now for $4.20</button></a>
+
            </div>
               <div class = "col-md-4">
                  <p style = "margin-left: 75px"> Player Unknown's Battlegrounds </p>
                  <img class="img-responsive" src = "images/pubg.jpg" >
-                 <p > Price:6.20$ </p>
+                 <div><br></div>
+              <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding: 5px" >buy now for $6.20</button></a>
               </div>
     </div>
 </div>
@@ -113,18 +140,21 @@
         <div class = "col-md-4">
           <p style = "margin-left: 75px"> Battlefield V </p>
           <img  class="img-responsive" src = "images/bfv.jpg" >
-          <p> Price:2.20$ </p>
+         <div><br></div>
+          <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding:5px" >buy now for $2.20</button></a>
 
         </div>
            <div class = "col-md-4">
              <p style = "margin-left: 75px"> Fifa 19 </p>
              <img  class="img-responsive" src = "images/Fifa.jpg" >
-             <p > Price:4.20$ </p>
+            <div><br></div>
+          <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding:5px" >buy now for $4.20</button></a>
            </div>
               <div class = "col-md-4">
                  <p style = "margin-left: 75px"> Tom Clancy's Rainbow Six Seige </p>
                  <img class="img-responsive" src = "images/6.jpg" >
-                 <p > Price:6.20$ </p>
+                 <div><br></div>
+          <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding:5px" >buy now for $6.20</button></a>
               </div>
     </div>
 </div>
