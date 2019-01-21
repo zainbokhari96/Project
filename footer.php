@@ -1,4 +1,4 @@
-<?php
+
 <footer class="ct-u-backgroundDarkGray" style="margin-bottom: 40px">
 
           <div class="ct-footerBottom">
@@ -34,4 +34,3 @@
               </div>
           </div>
       </footer>
-?>
