@@ -1,44 +1,47 @@
 <?php 
   include('connect.php');
-  //session_start();
-$c = 0;
+
+//session_start();
+
+$SelectionID = 0;
 
 if(isset($_POST['insert_pro'])){
     //getting text data from the fields
     $rank = $_POST['pro_title'];
     $qty = intval($_POST['pro_price']);
-   
+   echo $qty;
+  echo $rank;
 
  if(isset($_POST['pro_brand'])){
-    $c = $_POST['pro_brand'];
-}
+    $SelectionID = $_POST['pro_brand'];
+  }
 
-if($c == '1'){
+if($SelectionID == '1'){
 
       $q = "UPDATE `dota2` SET `Quantity` = Quantity - '$qty' WHERE `dota2`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 }
-if($c == '2'){
+if($SelectionID == '2'){
      $q = "UPDATE `csgo` SET `quantity` = quantity - '$qty' WHERE `csgo`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 }  
 
-if($c == '3'){
+if($SelectionID == '3'){
      $q = "UPDATE `fifa` SET `quantity` = quantity - '$qty' WHERE `fifa`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
 
-if($c == '4'){
+if($SelectionID == '4'){
       $q = "UPDATE `pubg` SET `quantity` = quantity - '$qty' WHERE `pubg`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
 
-if($c == '5'){
+if($SelectionID == '5'){
       $q = "UPDATE `r6` SET `quantity` = quantity - '$qty' WHERE `r6`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
 
-if($c == '6'){
+if($SelectionID == '6'){
      $q = "UPDATE `bf5` SET `quantity` = quantity - '$qty' WHERE `bf5`.`rank` = '$rank'";
       $query = mysqli_query($con,$q);
 } 
@@ -101,7 +104,7 @@ if($c == '6'){
 
 </div>
 <div class="container">
-    <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Product </h1>
+    <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Buy New </span> Account </h1>
     <form action="checkout.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
@@ -115,6 +118,7 @@ if($c == '6'){
                     <select class="form-control" id="pro_title" name="pro_title">
                         <option>Available Accounts</option>
                         <?php
+                      	
                             $getBrandsQuery = "select id,rank from dota2 union select id,rank from csgo union select id,rank from fifa union select id,rank from pubg union select id,rank from r6 union select id,rank from bf5";
                             $getBrandsResult = mysqli_query($con,$getBrandsQuery);
                             while($row = mysqli_fetch_assoc($getBrandsResult)){
@@ -137,6 +141,7 @@ if($c == '6'){
                         <div class="input-group-text"><i class="fas fa-stamp"></i></div>
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
+                    	
                         <option>Select Game</option>
                         <?php
                             $getBrandsQuery = "select * from games";
@@ -147,6 +152,7 @@ if($c == '6'){
                                 echo "<option value='$brand_id'>$brand_title</option>";
                             }
                         ?>
+
                     </select>
                 </div>
             </div>

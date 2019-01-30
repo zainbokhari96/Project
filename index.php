@@ -16,33 +16,33 @@
    
 
 <body>
-<?php include_once ("includes/nav.php"); ?>
+  <?php include_once ("includes/nav.php"); ?>
 
 
 
+<div class="content">
 
-<div class="container-fluid ct-u-triangleBottomLeft ct-pageHeader ct-pageHeader--motive ct-pageHeader--hasDescription ct-u-padding10>
-    <div class="col-xl-12" style="padding-top:65px;">
+   <div class="container-fluid ct-u-triangleBottomLeft ct-pageHeader ct-pageHeader--motive ct-pageHeader--hasDescription ct-u-padding10" >
+        
         <div class="row">
-            <div class="col-md-8 ">
+            <div class="col-md-8">
                 <h1 class="text-lowercase ct-fw-600 ct-u-colorWhite" style="font-size: 80px">
                     Welcome<sup><i class="fa fa-home"></i></sup>
                 </h1>
             </div>
             <div class="col-md-4">
-                        <span class="ct-u-size20 ct-u-colorWhite">
+                        <h3 class="ct-u-size20 ct-u-colorWhite">
                             We have all of your favorite games here with us. Join us and get Steam accounts for an amazingly cheap rate.
-                        </span>
+                        </h3>
             </div>
         </div>
-    </div>
 
+  </div>
 
 </div>
-</div>
 
-<h2 class="ct-fw-600 class=col-xl-12">
-    <span class="text-lowercase">login to buy!</span><br>
+<h2 class="ct-fw-600 col-xl-12 col-md-6 col-sm-4">
+    <span><strong> Premium Gaming Accounts </strong></span><br>
     <small class="ct-u-colorMotive ct-fw-300">Make your gaming experiance worthwhile.</small>
 </h2>
 
@@ -50,17 +50,17 @@
 <div class = "container">
 <div class="row">
   <div class = "col-md-4">
-    <h1>Recent transformation</h1>
+    <h1 style="text-align: center;"><strong>Recent transformation</strong></h1><br>
     <p style="text-align: center">With so many differentiated sellers in the community, we underwent on a reciprocated decision to start a marketplace merely on a standalone website that will aid the consumers and the venders, bringing them unruffled on a sole platform.</p>
   </div>
 
     <div class = "col-md-4">
-       <h1 style="margin-left: 120px">Mission</h1>
+       <h1 style=" text-align: center;"><strong> Mission </strong></h1><br>
        <p style="text-align: center">Our mission is to keep our clients contented with our products and support system. We’ve undertaken responsibilities to curlicue the marketplace for the ever-growing demand.</p>
     </div>
 
       <div class = "col-md-4">
-         <h1 style="margin-left: 140px">Vision</h1>
+         <h1 style=" text-align: center;"><strong> Vision </strong></h1><br>
          <p style="text-align: center">Our vision of what our company will become in the future is to have settled bond with our customers so robust that they will view us more as indispensable cohorts. We will constantly seek out and work with the community we represent to deliver the most innovative and exciting services possible.</p>
       </div>
 
@@ -122,34 +122,46 @@
 </div>
 <!-- Jummbotron account list -->
 
-    <?php   include_once("includes/footer.php");  ?>
 
 
-<script>
+<footer class="ct-u-backgroundDarkGray" style="margin-bottom: 40px">
 
-    function myFunction1() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+    <div class="ct-footerBottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>COPYRIGHT © <a href="/">Steam Accounts Pakistan</a> 2018</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="pull-right">
+                        <div class="ct-socials">
+                            <ul class="Allign-the-elements">
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-fw fa-pinterest"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="fa fa-fw fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-fw fa-facebook-square"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-window.onscroll = function() {myFunction()};
 
-var myTopnav = document.getElementById("myTopnav");
-var sticky = myTopnav.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    myTopnav.classList.add("sticky")
-  } else {
-    myTopnav.classList.remove("sticky");
-  }
-}
-
-</script>
 
 
 

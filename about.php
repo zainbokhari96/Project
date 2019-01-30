@@ -24,7 +24,6 @@
 
  <?php include_once ("includes/nav.php"); ?>
 
-
  <div class="mb-wrap mb-style-2">
     <br> <blockquote cite="http://www.gutenberg.org/ebboks/11">
          <p>Most people who end up being successful have good grades, but it's orthogonal - there's no extra information than if they put together a website and have bunch of fans who love coming and seeing what they're doing.
@@ -104,8 +103,41 @@
           </figure>
       </li>
 
-      <?php   include_once("includes/footer.php");  ?>
+      <footer class="ct-u-backgroundDarkGray" style="margin-bottom: 40px">
 
+          <div class="ct-footerBottom">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <p>COPYRIGHT © <a href="/">Steam Accounts Pakistan</a> 2018</p>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="pull-right">
+                              <div class="ct-socials">
+                                  <ul class="Allign-the-elements">
+                                      <li>
+                                          <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-fw fa-pinterest"></i></a>
+                                      </li>
+                                      <li>
+                                          <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="fa fa-fw fa-instagram"></i></a>
+                                      </li>
+                                      <li>
+                                          <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-fw fa-facebook-square"></i></a>
+                                      </li>
+                                      <li>
+                                          <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
+                                      </li>
+                                      <li>
+                                          <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
 
- </body>
+</body>
 </html>

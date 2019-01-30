@@ -17,6 +17,28 @@
             rel="stylesheet"  type='text/css'>
     <link  rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link  rel="stylesheet" type="text/css" href="css/style.css">
+    <!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/bootstraplogin.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
    
 
 <body>
@@ -41,10 +63,9 @@
   </div>
 
   <div class="topnav" id="myTopnav" style = "z-index:999;">
-    <a href="index.php" >Home</a>
-    <a href="About.html">About</a>
-    <a href="Contact Us.html">Contact</a>
-    <a href="#">Terms</a>
+    <a href="index2.php" >Home</a>
+    <a href="About.php">About</a>
+    <a href="Contact_Us.php">Contact</a>
     <a href="checkout.php">Checkout</a>
     <a href="#" class="icon" onclick="myFunction1()">
       <i class="fa fa-bars"></i>
@@ -74,7 +95,7 @@
 </div>
 
 <h2 class="ct-fw-600 class=col-xl-12">
-    <span class="text-lowercase">That's the spirit!</span><br>
+    <span class="text-lowercase">Bravo!</span><br>
     <small class="ct-u-colorMotive ct-fw-300"> Now you can buy the acccounts below</small>
 </h2>
 
@@ -135,7 +156,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" >
     <div class = "row" style="margin-top: 20px">
         <div class = "col-md-4">
           <p style = "margin-left: 75px"> Battlefield V </p>
@@ -154,7 +175,7 @@
                  <p style = "margin-left: 75px"> Tom Clancy's Rainbow Six Seige </p>
                  <img class="img-responsive" src = "images/6.jpg" >
                  <div><br></div>
-          <a href="checkout.php"><button type="button" style="font: bold 14px Arial; margin-left: 75px; padding:5px" >buy now for $6.20</button></a>
+          <a href="checkout.php"><button type="button"  style="font: bold 14px Arial; margin-left: 75px; padding:5px" >buy now for $6.20</button></a>
               </div>
     </div>
 </div>
@@ -198,6 +219,25 @@
         </div>
     </div>
 </footer>
+
+  <div id="dropDownSelect1"></div>
+  
+<!--===============================================================================================-->
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/daterangepicker/moment.min.js"></script>
+  <script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+  <script src="js/main.js"></script>
 
 
 

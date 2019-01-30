@@ -1,6 +1,6 @@
 <?php
 
-require_once "server/db_connection.php";
+require_once "connect.php";
 
 if(isset($_POST['insert_contact_us'])){
     $name = $_POST['name'];
@@ -27,7 +27,7 @@ if(isset($_POST['insert_contact_us'])){
     <title>Contact Us</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
           rel="stylesheet"  type='text/css'>
