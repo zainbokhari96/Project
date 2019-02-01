@@ -45,7 +45,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Admin Login</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -58,36 +58,13 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark">
-    <a class="navbar-brand" href="#">Steam Accounts Pakistan</a>
-    <!-- Links -->
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Registration.html">Registration</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Login.html">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Forget%20Password.html">Forget Password</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="Contact%20Us.html">Contact</a>
-        </li>
-    </ul>
-
-</nav>
+<?php include_once ("includes/nav.php");
+?>
 
 
 <div class="container">
     <h1 class="text-center my-4"> <i class="fas fa-users fa-md"></i>
-        <span class="d-none d-sm-inline"> Customer </span> Login
+        <span class="d-none d-sm-inline"> Admin </span> Login
     </h1>
     <form method="post">
         <div class="row my-3">
@@ -129,42 +106,8 @@
 </div>
 
 
-<footer class="ct-u-backgroundDarkGray" style="margin-bottom: 40px">
-
-    <div class="ct-footerBottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>COPYRIGHT © <a href="/">Steam Accounts Pakistan</a> 2018</p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="pull-right">
-                        <div class="ct-socials">
-                            <ul class="Allign-the-elements">
-                                <li>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-fw fa-pinterest"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="fa fa-fw fa-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-fw fa-facebook-square"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+<?php include_once ("includes/footer.php");
+?>
 
 </body>
 <script>
