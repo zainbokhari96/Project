@@ -12,7 +12,7 @@
             <a class="nav-link" href="Login.php">Login</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Forget%20Passwordphp">Forget Password</a>
+            <a class="nav-link" href="ForgetPassword.php">Forget Password</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
